@@ -1,0 +1,10 @@
+api:
+  chatwork:
+    base_url: https://api.chatwork.com/v2
+    room_id: # chatwork room id
+    client_id: # chatwork api id
+datasource:　# db使いたい時だけ設定
+  host: 'XXX.XXX.XXX.XXX'
+  db: dbname
+  user: user name
+  password: pw
