@@ -2,7 +2,10 @@ api:
   chatwork:
     base_url: https://api.chatwork.com/v2
     room_id: # chatwork room id
-    client_id: # chatwork api id
+    api_key: # chatwork api key
+  livedoor:
+    base_url: http://weather.livedoor.com/forecast/webservice/json/v1
+    city: # your city
 datasource:　# db使いたい時だけ設定
   host: 'XXX.XXX.XXX.XXX'
   db: dbname
