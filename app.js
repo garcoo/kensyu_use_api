@@ -1,6 +1,7 @@
 const request = require('request');
 const INDENTION = '\n';
 
+// yamlの読み込み
 var fs = require('fs'),
 props = require('props');
 var yamlData = fs.readFileSync('config/application-develop.yml','utf8');
@@ -16,6 +17,7 @@ request.get({
   },
   json: true
 }, function(err, req, data){
+  // call chatwork send_message-api
   request.post({
     uri: config.api.chatwork.base_url + '/rooms/' + config.api.chatwork.room_id + '/messages',
     headers: {
@@ -25,11 +27,9 @@ request.get({
     form: {
         'body' : makeSendMsg(data)
     }
-}, (err, res, data) => {
+  }, (err, res, data) => {
     console.log(data);
-});
-
-
+  });
 });
 
 // chatwork送付用のメッセージ文面作成関数
